@@ -1,3 +1,4 @@
+import 'package:animate_do/animate_do.dart';
 import 'package:animations/widgets/button_big.dart';
 import 'package:animations/widgets/headers.dart';
 import 'package:flutter/material.dart';
@@ -95,17 +96,17 @@ class EmergencyPage extends StatelessWidget {
       ),
     ];
 
-    List<Widget> itemMap = items.map(
-      (item) =>  ButtonBig(
-        icon: item.icon,
-        texto: item.texto,
-        color1: item.color1,
-        color2: item.color2, 
-        onPress: () { 
-
-        }
-        ) 
-      ).toList(); 
+    List<Widget> itemMap = items
+        .map((item) => FadeIn(
+              duration: const Duration(milliseconds: 250),
+              child: ButtonBig(
+                  icon: item.icon,
+                  texto: item.texto,
+                  color1: item.color1,
+                  color2: item.color2,
+                  onPress: () {}),
+            ))
+        .toList(); 
 
 
     return   Scaffold(
