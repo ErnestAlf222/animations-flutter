@@ -1,5 +1,5 @@
 import 'package:animations/config/theme/app_theme.dart';
-import 'package:animations/pages/emergency_page.dart';
+import 'package:animations/pages/sliver_list_page.dart';
 import 'package:flutter/material.dart';
 
 
@@ -16,7 +16,7 @@ class MainApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: AppTheme().theme(),
       home: const Scaffold(
-        body:EmergencyPage(),
+        body:SliverListPage(),
       ),
     );
   }
