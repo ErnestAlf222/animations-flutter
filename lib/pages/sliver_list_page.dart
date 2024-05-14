@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class SliverListPage extends StatelessWidget {
   const SliverListPage({super.key});
@@ -10,10 +9,10 @@ class SliverListPage extends StatelessWidget {
         body: Stack(
       children: [
         _MainScroll(),
-        Positioned(
+        const Positioned(
           bottom: -10,
           right: 0,
-          child: const _ButtonNewList(),
+          child: _ButtonNewList(),
         ),
       ],
     ));
